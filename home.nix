@@ -126,6 +126,9 @@
     enable = true;
     userEmail = "35557567+KarelSchwab@users.noreply.github.com";
     userName = "Karel Schwab";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   programs.direnv = {
