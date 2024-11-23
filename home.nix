@@ -64,6 +64,8 @@
     # Programming dependencies
     shellcheck
     direnv
+    pre-commit
+    devcontainer
     
     # Python development    
     python312Full
