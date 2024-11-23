@@ -68,6 +68,7 @@
     # Python development    
     python312Full
     python312Packages.pip
+    python312Packages.pipx
 
     # GUI apps
     brave
@@ -85,9 +86,11 @@
           theme = "robbyrussell";
           plugins = [
             "direnv"
-            "pyenv"
           ];
       };
+      initExtra = ''
+        export PATH="$HOME/.local/bin:$PATH"
+      '';
   };
 
   programs.neovim = {
@@ -123,12 +126,6 @@
     enable = true;
     userEmail = "35557567+KarelSchwab@users.noreply.github.com";
     userName = "Karel Schwab";
-  };
-
-  programs.gh = {
-    enable = true;
-    gitCredentialHelper.enable = true;
-    settings.git_protocol = "ssh";
   };
 
   programs.direnv = {
